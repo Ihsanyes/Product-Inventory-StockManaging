@@ -44,7 +44,7 @@ def product_list_create(request):
             except json.JSONDecodeError:
                 return Response({'error': 'Invalid variants format. Expecting a JSON array.'}, status=400)
 
-            # Generate unique ProductID
+            
             while True:
                 next_product_id = random.randint(10000, 99999)
                 if not Products.objects.filter(ProductID=next_product_id).exists():
