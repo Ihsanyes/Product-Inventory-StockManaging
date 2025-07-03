@@ -58,7 +58,7 @@ def product_list_create(request):
                     HSNCode=HSNCode,
                     TotalStock=TotalStock,
                     ProductImage=ProductImage,
-                    CreatedUser=User.objects.get(id=1),  # Change this to request.user if needed
+                    CreatedUser=User.objects.get(id=1),  
                     UpdatedDate=timezone.now()
                 )
 
